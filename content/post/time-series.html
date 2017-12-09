@@ -1,0 +1,33 @@
+---
+title: Time series
+author: Akhilesh Atluri
+date: '2017-09-27'
+categories:
+  - PLotting
+tags:
+  - dplyr
+  - ggiraph
+  - ggplot
+  - lahman
+---
+
+
+
+<p><em>Inserting libraries to use for the plots</em></p>
+<pre class="r"><code>library(Lahman)
+library(dplyr)
+library(ggplot2)
+library(ggiraph)</code></pre>
+<ul>
+<li>Lets store some exavt data to data frame.</li>
+</ul>
+<pre class="r"><code>df&lt;-Batting%&gt;%
+  filter(playerID==&#39;ruthba01&#39;)%&gt;%
+  select(yearID,HR)</code></pre>
+<ul>
+<li>Lets plot the graph using the data using ggplot.</li>
+</ul>
+<pre class="r"><code>ggplot()+
+  geom_line(data=df,aes(x=yearID,y=HR))+
+  geom_point_interactive(data=df,aes(x=yearID,y=HR,tooltip=HR,data_id=yearID))</code></pre>
+<p><img src="/post/time-series_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>

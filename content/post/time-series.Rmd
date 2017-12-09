@@ -1,0 +1,42 @@
+---
+title: Time series
+author: Akhilesh Atluri
+date: '2017-09-27'
+categories:
+  - PLotting
+tags:
+  - dplyr
+  - ggiraph
+  - ggplot
+  - lahman
+---
+
+
+_Inserting libraries to use for the plots_
+
+```{r message=FALSE, warning=FALSE}
+library(Lahman)
+library(dplyr)
+library(ggplot2)
+library(ggiraph)
+```
+
+
+* Lets store some exavt data to data frame. 
+
+```{r}
+df<-Batting%>%
+  filter(playerID=='ruthba01')%>%
+  select(yearID,HR)
+```
+
+
+* Lets plot the graph using the data using ggplot. 
+
+```{r}
+ggplot()+
+  geom_line(data=df,aes(x=yearID,y=HR))+
+  geom_point_interactive(data=df,aes(x=yearID,y=HR,tooltip=HR,data_id=yearID))
+
+```
+
