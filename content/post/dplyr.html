@@ -16,11 +16,9 @@ tags:
 <h3>These are the Following libraries that we need to do this</h3>
 <pre class="r"><code>library(Lahman)
 library(dplyr)</code></pre>
-<p>** Lets go through some of the features with example**</p>
 <div id="filtering-columns-and-rows" class="section level4">
 <h4>Filtering Columns and Rows</h4>
 <p><em>When using dplyr, you can filter columns and rows by using select and filter. Let’s look at an example using Lahman data base. We first have to load the Lahman and dplyr packages.</em></p>
-<p><em>Now, Suppose we would like to see the homerun totals for the 1927 New York Yankees, We could run the following Code :</em></p>
 <pre class="r"><code>Batting%&gt;%
   select(playerID,yearID,teamID,HR)%&gt;%
   filter(teamID==&#39;NYA&#39; &amp; yearID==1927)</code></pre>

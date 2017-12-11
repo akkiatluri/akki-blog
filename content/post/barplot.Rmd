@@ -28,11 +28,8 @@ library(ggiraph)
 
 ```{r}
 df<-Teams%>%
-  #filtering all the data for 1980 
   filter(yearID == 1980)%>%
   select(name,HR)%>%
-  #Arranging all data in asscending order w.r.t HR, but we have to factor the level
-  #inorder to display on the bargraph.
   arrange(HR)
 ```
 
@@ -40,29 +37,24 @@ df<-Teams%>%
 
 ```{r}
 ggplot()+
-  # (dont do grouping or tallying))stat = identity means ggplot will do tallying for us.
   geom_bar(data=df,aes(x=name,y=HR),color="white",fill="purple",stat = "identity")+
-  # Since the names are big and it will not fit all together, we can flip it over
-  #using the below api.
   coord_flip()
 ```
 
 
 * Converting to factors or categorising it.*
 ```{r}
-# In this way we get arranged graph by leveling it w.r.t to the HR.
+
 df$name<-factor(df$name,levels=df$name)
 ```
 
 
-* Now lets plot the graph using ggplot after arranging. After Factoring.
+* Now lets plot the graph using ggplot after arranging
 
 ```{r}
 ggplot()+
-  # (dont do grouping or tallying))stat = identity means ggplot will do tallying for us.
+  
   geom_bar(data=df,aes(x=name,y=HR),color="white",fill="purple",stat = "identity")+
-  # Since the names are big and it will not fit all together, we can flip it over
-  #using the below api.
   coord_flip()+
 
   ggtitle("1980 Team Homeruns")+

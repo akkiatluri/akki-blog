@@ -2,7 +2,7 @@
 title: Scatter Plots
 author: Akhilesh Atluri
 date: '2017-09-26'
-categories: [Data visualization]
+categories: [Plotting , ggplot]
 tags: [ggplot,ggiraph]
 weight: 10
 draft: false
@@ -54,12 +54,12 @@ HR_vs_SO$name<-paste(HR_vs_SO$nameFirst,HR_vs_SO$nameLast)
 
 ```
 
-* Now using ggplot we can plot the graph for the table we generated 
+* Now using ggplot we can plot the graph for the table we have
 
 ```{r}
 g<-ggplot()+
   geom_point_interactive(data=HR_vs_SO,aes(x=career_SO,y=career_HR,tooltip=nameLast,data_id=nameLast))+
-  ggtitle("career home runs vs strike outs for great hitlers.")+
+  ggtitle("career home runs vs strike outs")+
   xlab("career strikeouts")+
   ylab("career Homeruns")
   

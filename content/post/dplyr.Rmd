@@ -24,7 +24,6 @@ library(Lahman)
 library(dplyr)
 ```
 
-** Lets go through some of the features with example**
 
 #### Filtering Columns and Rows
 
@@ -32,7 +31,6 @@ _When using dplyr, you can filter columns and rows by using select and filter.
 Let's look at an example using Lahman data base.
 We first have to load the Lahman and dplyr packages._
 
-_Now, Suppose we would like to see the homerun totals for the 1927 New York Yankees, We could run the following Code :_
 
 ```{r}
 Batting%>%

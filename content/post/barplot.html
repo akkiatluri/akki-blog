@@ -23,35 +23,26 @@ library(ggiraph)</code></pre>
 <li>Lets create a table for creating a bar graph.</li>
 </ul>
 <pre class="r"><code>df&lt;-Teams%&gt;%
-  #filtering all the data for 1980 
   filter(yearID == 1980)%&gt;%
   select(name,HR)%&gt;%
-  #Arranging all data in asscending order w.r.t HR, but we have to factor the level
-  #inorder to display on the bargraph.
   arrange(HR)</code></pre>
 <ul>
 <li>We are just trying to plot the graph after using arrange api.Before factoring</li>
 </ul>
 <pre class="r"><code>ggplot()+
-  # (dont do grouping or tallying))stat = identity means ggplot will do tallying for us.
   geom_bar(data=df,aes(x=name,y=HR),color=&quot;white&quot;,fill=&quot;purple&quot;,stat = &quot;identity&quot;)+
-  # Since the names are big and it will not fit all together, we can flip it over
-  #using the below api.
   coord_flip()</code></pre>
 <p><img src="/post/barplot_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <ul>
 <li>Converting to factors or categorising it.*</li>
 </ul>
-<pre class="r"><code># In this way we get arranged graph by leveling it w.r.t to the HR.
-df$name&lt;-factor(df$name,levels=df$name)</code></pre>
+<pre class="r"><code>df$name&lt;-factor(df$name,levels=df$name)</code></pre>
 <ul>
-<li>Now lets plot the graph using ggplot after arranging. After Factoring.</li>
+<li>Now lets plot the graph using ggplot after arranging</li>
 </ul>
 <pre class="r"><code>ggplot()+
-  # (dont do grouping or tallying))stat = identity means ggplot will do tallying for us.
+  
   geom_bar(data=df,aes(x=name,y=HR),color=&quot;white&quot;,fill=&quot;purple&quot;,stat = &quot;identity&quot;)+
-  # Since the names are big and it will not fit all together, we can flip it over
-  #using the below api.
   coord_flip()+
 
   ggtitle(&quot;1980 Team Homeruns&quot;)+
