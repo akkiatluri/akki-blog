@@ -1,4 +1,4 @@
-baseurl = "https://akkisblog.netlify.com"
+baseurl = "https://akkisblog.netlify.com/"
 title = "My Blog"
 theme = "ghostwriter"
 languageCode = "en-us"
