@@ -1,5 +1,5 @@
 baseurl = "https://hungry-archimedes-d1e064.netlify.com/"
-title = "Ghostwriter example"
+title = "My Blog"
 theme = "ghostwriter"
 languageCode = "en-us"
 copyright = "My Name"
@@ -15,15 +15,10 @@ googleAnalytics = "XXX"
 
 [Params]
     intro = true
-    headline = "Ghostwriter example"
-    description = "Ghostwriter example description"
-    github = "https://github.com/XXX"
-    gitlab = "https://gitlab.com/XXX"
-    linkedin = "https://linkedin.com/in/XXX/"
-    gplus = "https://google.com/+XXX"
-    twitter = "https://twitter.com/XXX"
-    stackoverflow = "https://stackoverflow.com/users/XXX/YYY"
-    email = "XXX@example.com"
+    headline = "Data Wrangling and Plotting"
+    description = "This is blog is about my work in Data mining and Plotting"
+    github = "https://github.com/akkiatluri"
+    email = "atluriakhilesh@gmail.com"
     opengraph = true
     shareTwitter = true
     shareFacebook = true
@@ -41,10 +36,6 @@ googleAnalytics = "XXX"
     url = "/"
     weight = 1
 
-[[menu.main]]
-    name = "Projects"
-    url = "/project/"
-    weight = 2
 
 [[menu.main]]
     name = "Contact"

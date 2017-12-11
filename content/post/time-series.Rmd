@@ -12,7 +12,7 @@ tags:
 ---
 
 
-_Inserting libraries to use for the plots_
+Inserting libraries to use for the plots
 
 ```{r message=FALSE, warning=FALSE}
 library(Lahman)
@@ -39,4 +39,3 @@ ggplot()+
   geom_point_interactive(data=df,aes(x=yearID,y=HR,tooltip=HR,data_id=yearID))
 
 ```
-
