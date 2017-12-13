@@ -1,0 +1,14 @@
+---
+title: dashboard
+author: Akhilesh Atluri
+date: '2017-12-13'
+slug: dashboard
+categories: [R]
+tags: [R,Dashboard]
+description: ''
+---
+
+Flex Dashboard is the tool where you can display more than a single plot on a single frame work,
+ Here is the link for the dashboard we have worked on 
+ 
+ https://akkiatluri.github.io/dashboard/
