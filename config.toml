@@ -16,7 +16,7 @@ googleAnalytics = "XXX"
 [Params]
     intro = true
     headline = "Data Wrangling and Plotting"
-    description = "This is blog is about my work in Data mining and Plotting"
+    description = "This blog is about my work in Data mining and Plotting"
     github = "https://github.com/akkiatluri"
     email = "atluriakhilesh@gmail.com"
     opengraph = true
